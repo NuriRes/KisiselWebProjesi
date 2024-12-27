@@ -1,0 +1,41 @@
+﻿@using KisiselWebProjesi.Models.Siniflar
+@model List<AnaSayfa>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/web-KişiselWebSitesi/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Kişisel web sitesi </title>
+</head>
+<body>
+    <div class="center">
+        <div class="avatar">
+            @foreach (var x in Model)
+            {
+                <img src="~/web-KişiselWebSitesi/WhatsApp Image 2024-12-24 at 17.09.50.jpeg">
+            }
+
+
+        </div>
+        <div class="content">
+            @foreach (var x in Model)
+            {
+                <h1>Nuri Kaplan</h1>
+                <h2>@x.unvan</h2> 
+                <p> @x.aciklama.</p>
+                <h3>@x.iletisim</h3>
+
+            }
+        </div>
+        @Html.Action("ikonlar","AnaSayfa")
+        
+
+</body>
+</html>
